@@ -1,0 +1,33 @@
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vw;
+  padding: 1vw;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 10vw;
+  height: 10vh;
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.movie-info {
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.movie-info h3 {
+  font-size: 10px;
+  margin: 0;
+}
+
+.movie-info p {
+  font-size: 10px;
+  color: #555;
+}
