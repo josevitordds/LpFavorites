@@ -9,17 +9,19 @@
 .logoHeader{
     width: 15%;
     height: 100%;
-    background-color:#4756A4;
+    background-color:#2d3839;
     border-right: 1.5px solid #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #e0e4ce;
+    font-style: italic;
 }
 .pesquisaHeader {
     position: relative;
     width: 70%;
     height: 100%;
-    background-color: #4756A4;
+    background-color: #2d3839;
     border-right: 1.5px solid #ffffff;
     display: flex; 
     align-items: center; 
@@ -28,7 +30,7 @@
 }
 
 .iconHeader {
-    color: white; 
+    color: #e0e4ce;
     font-size: 1.6vw; 
     margin-left: 13vw; 
 }
@@ -41,6 +43,7 @@
     padding: 0.5vh 1vh; 
     font-size: 2vh;
     margin-right: 13vw; 
+    background-color: #e0e4ce;
     
 }
 
@@ -52,7 +55,7 @@
 .perfilHeader{
     width: 15%;
     height: 100%;
-    background-color:#4756A4;
+    background-color:#2d3839;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +75,7 @@
   border: 1px solid black;
 }
 .userIconHeader{
-    color: white; 
+    color: #e0e4ce;
     font-size: 1.7vw; 
     margin-top: 1vh;
 }
