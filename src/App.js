@@ -5,6 +5,7 @@ import MovieResults from "./pages/MovieResults";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import MovieCatResults from "./pages/MovieCatResults";
+import MovieDetails from "./pages/MovieDetails";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -22,6 +23,7 @@ function App() {
         <Route path="/catTerror" element={<MovieCatResults cat={27} />} />
         <Route path="/catComedia" element={<MovieCatResults  cat={35}/>} />
         <Route path="/catAventura" element={<MovieCatResults cat={12}/>} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
       </Routes>
     </Router>
   );

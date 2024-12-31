@@ -9,15 +9,16 @@ function Header({ setMovies }) {
   const [searchValue, setSearchValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
-  const API_KEY = "6b8d5c74";
+  const TMDB_API_KEY = "a0261dcdeeb25805ffd5a4ecd28d9225";
+  const TMDB_BASE_URL = "https://api.themoviedb.org/3";
 
   const fetchMovies = async (query) => {
     try {
-      const API_URL = `https://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`;
+      const API_URL = `${TMDB_BASE_URL}/search/movie?api_key=${TMDB_API_KEY}&query=${query}&language=pt-BR`;
       const response = await axios.get(API_URL);
 
-      if (response.data.Search) {
-        setMovies(response.data.Search);
+      if (response.data.results) {
+        setMovies(response.data.results); 
         navigate("/search");
       } else {
         setMovies([]);
@@ -29,13 +30,7 @@ function Header({ setMovies }) {
     }
   };
 
-  const handleProfileSubmit = async (e) => {
-    navigate("/profile");
-  };
-  const handleHomeSubmit = async (e) => {
-    navigate("/");
-  };
-
+ 
   const handleInputChange = async (event) => {
     const value = event.target.value;
     setSearchValue(value);
@@ -46,11 +41,11 @@ function Header({ setMovies }) {
     }
 
     try {
-      const API_URL = `https://www.omdbapi.com/?s=${value}&apikey=${API_KEY}`;
+      const API_URL = `${TMDB_BASE_URL}/search/movie?api_key=${TMDB_API_KEY}&query=${value}&language=pt-BR`;
       const response = await axios.get(API_URL);
 
-      if (response.data.Search) {
-        setSuggestions(response.data.Search.slice(0, 5));
+      if (response.data.results) {
+        setSuggestions(response.data.results.slice(0, 5)); 
       } else {
         setSuggestions([]);
       }
@@ -59,10 +54,11 @@ function Header({ setMovies }) {
     }
   };
 
-  const handleSuggestionClick = (title) => {
-    setSearchValue(title);
+
+  const handleSuggestionClick = (movie) => {
+    setSearchValue(movie.title);
     setSuggestions([]);
-    fetchMovies(title);
+    navigate(`/movie/${movie.id}`); 
   };
 
   const handleSearchSubmit = (event) => {
@@ -73,7 +69,7 @@ function Header({ setMovies }) {
 
   return (
     <div className="headerPage">
-      <div className="logoHeader" onClick={() => handleHomeSubmit()}>
+      <div className="logoHeader" onClick={() => navigate("/")}>
         <h1>lpFavorites</h1>
       </div>
       <form className="pesquisaHeader" onSubmit={handleSearchSubmit}>
@@ -91,16 +87,16 @@ function Header({ setMovies }) {
               <li
                 key={index}
                 className="suggestion-item"
-                onClick={() => handleSuggestionClick(movie.Title)}
+                onClick={() => handleSuggestionClick(movie)}
               >
-                {movie.Title}
+                {movie.title}
               </li>
             ))}
           </ul>
         )}
       </form>
       <div className="perfilHeader">
-        <div className="perfilHeader-container" onClick={() => handleProfileSubmit()}>
+        <div className="perfilHeader-container" onClick={() => navigate("/profile")}>
           <FontAwesomeIcon icon={faUser} className="userIconHeader" />
           <p>perfil</p>
         </div>
