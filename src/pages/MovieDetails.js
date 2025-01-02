@@ -4,10 +4,10 @@ import "../styles/MovieDetails.css";
 import axios from "axios";
 
 function MovieDetails() {
-  const { id } = useParams(); // Obtém o ID do filme a partir da URL
+  const { id } = useParams(); 
   const [movieDetails, setMovieDetails] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(null); 
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -41,6 +41,7 @@ function MovieDetails() {
   if (!movieDetails) {
     return <p>Filme não encontrado.</p>;
   }
+  console.log(movieDetails);
 
   return (
     <>
@@ -64,6 +65,7 @@ function MovieDetails() {
               <strong>Gêneros:</strong>{" "}
               {movieDetails.genres.map((genre) => genre.name).join(", ")}
             </p>
+            <p><strong>Sinopse:</strong> {movieDetails.overview}</p>
           </div>
         </div>
         <div className="detailsMovie-inf"></div>

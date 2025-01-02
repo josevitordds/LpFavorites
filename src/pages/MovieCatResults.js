@@ -15,31 +15,31 @@ function MovieCatResults({cat}) {
         </div>
         <div className="movieCatResults-movies">
           <div className="movieCatResults-components">
-            <h2>ksdksndknsk</h2>
+            <h2>Most Famous</h2>
             <p>ver mais</p>
           </div>
-          <MoviesRecent num={2} />
+          <MoviesRecent filter={"vote_average.desc"} filterOther={1000} genreId={cat} num={2} />
         </div>
         <div className="movieCatResults-movies">
           <div className="movieCatResults-components">
             <h2>sdnjsndjsn</h2>
             <p>ver mais</p>
           </div>
-          <MoviesRecent  num={3}/>
+          <MoviesRecent  genreId={cat} num={3}/>
         </div>
         <div className="movieCatResults-movies">
           <div className="movieCatResults-components">
             <h2>sidnoiasndioans</h2>
             <p>ver mais</p>
           </div>
-          <MoviesRecent  num={4}/>
+          <MoviesRecent  genreId={cat} num={4}/>
         </div>
         <div className="movieCatResults-movies">
           <div className="movieCatResults-components">
             <h2>sidoisadioasdi</h2>
             <p>ver mais</p>
           </div>
-          <MoviesRecent num={5}/>
+          <MoviesRecent genreId={cat} num={5}/>
         </div>
       </div>
     </>
