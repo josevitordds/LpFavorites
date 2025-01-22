@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
 .headerPage{
     display: flex;
     align-items: center;
@@ -16,6 +17,7 @@
     justify-content: center;
     color: #e0e4ce;
     font-style: italic;
+    cursor: pointer;
 }
 .pesquisaHeader {
     position: relative;
@@ -67,12 +69,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transition: background-color 0.3s ease, border 0.3s ease; 
+    transition: transform 0.3s ease; 
     cursor: pointer;
 }
 .perfilHeader-container:hover{
-  background-color: #384481;
-  border: 1px solid black;
+  transform: scale(1.1);
 }
 .userIconHeader{
     color: #e0e4ce;

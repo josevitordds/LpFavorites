@@ -40,7 +40,7 @@ function MoviesRecent({ genreId, filter, filterOther, num }) {
     <div>
       {recentMovies.length > 0 ? (
         <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
-          {recentMovies.slice(0, 7).map((movie) => (
+          {recentMovies.slice(0, 6).map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
           ))}
         </div>

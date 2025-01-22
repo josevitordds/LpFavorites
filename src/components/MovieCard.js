@@ -14,11 +14,6 @@ function MovieCard({ movie }) {
         alt={movie.title}
         className="movie-poster"
       />
-      <div className="movie-info">
-        <h3>{movie.title}</h3>
-        <p>Lançamento: {movie.release_date || "Data desconhecida"}</p>
-        <p>Nota: {movie.vote_average || "N/A"}</p>
-      </div>
     </Link>
   );
 }

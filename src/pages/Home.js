@@ -15,7 +15,7 @@ function Home() {
       <div className="homePage">
         <div className="homePage-categors">
           <div className="homePage-nameCat">
-            <h2>Categorias</h2>
+            <h2>CATEGORIAS</h2>
           </div>
           <div className="homePage-catCd">
             <section className="homePage-cardCat"  onClick={() => handleCatSubmit("Acao")}>

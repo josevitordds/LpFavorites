@@ -98,7 +98,6 @@ function Header({ setMovies }) {
       <div className="perfilHeader">
         <div className="perfilHeader-container" onClick={() => navigate("/profile")}>
           <FontAwesomeIcon icon={faUser} className="userIconHeader" />
-          <p>perfil</p>
         </div>
       </div>
     </div>
