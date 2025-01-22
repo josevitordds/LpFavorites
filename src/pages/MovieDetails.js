@@ -4,10 +4,10 @@ import "../styles/MovieDetails.css";
 import axios from "axios";
 
 function MovieDetails() {
-  const { id } = useParams(); 
+  const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null); 
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -55,17 +55,27 @@ function MovieDetails() {
             />
           </div>
           <div className="detailsMovie-infDetails">
-            <p>
-              <strong>Data de Lançamento:</strong> {movieDetails.release_date}
-            </p>
-            <p>
-              <strong>Avaliação:</strong> {movieDetails.vote_average}/10
-            </p>
-            <p>
-              <strong>Gêneros:</strong>{" "}
-              {movieDetails.genres.map((genre) => genre.name).join(", ")}
-            </p>
-            <p><strong>Sinopse:</strong> {movieDetails.overview}</p>
+            <div className="detailsMovie-infDetails-cards">
+              <section className="avalMovie">
+                <strong>Avaliação</strong> {movieDetails.vote_average}/10
+              </section>
+              <section className="dateMovie">
+                <strong>Data de Lançamento</strong> {movieDetails.release_date}
+              </section>
+              <section className="genreMovie">
+                <strong>Gêneros</strong>{" "}
+                {movieDetails.genres.map((genre) => genre.name).join(", ")}
+              </section>
+            </div>
+            <section className="descMovie">
+              <p>
+              <strong>Sinopse:</strong> {movieDetails.overview}
+              </p>
+            </section>
+            <div className="submitFavorite">
+              <input type="checkbox"></input>
+              <p>favorito</p>
+            </div>
           </div>
         </div>
         <div className="detailsMovie-inf"></div>

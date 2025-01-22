@@ -10,6 +10,9 @@
 }
 .detailsMovie-page h2{
     padding-top: 5vh;
+    font-size: 2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
 }
 .detailsMovie-imgInf{
     height: 100%;
@@ -19,7 +22,7 @@
     justify-content: space-around;
 }
 .detailsMovie-img{
-    width: 50%;
+    width: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,16 +35,40 @@
     
 }
 .detailsMovie-infDetails{
-    width: 50%;
+    width: 55%;
     display: flex;
     align-items: start;
     justify-content:start;
     flex-direction: column;
 }
-.detailsMovie-infDetails p{
-    font-size: 1.2vw;
-}
 .detailsMovie-inf{
     width: 100%;
     height: 0%;
+}
+.avalMovie, .dateMovie, .genreMovie{
+    height: 7vh;
+    width: 40%;
+    background-color: #2d3839;
+    color:#e0e4ce ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1vw;
+}
+.detailsMovie-infDetails-cards{
+    display: flex;
+    height: 50%;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+.descMovie{
+    padding-top: 2vh;
+    width: 90%;
+}
+.descMovie p{
+    font-size: 1.3vw;
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
