@@ -92,7 +92,7 @@
     top: calc(75% + 1px);
     left: 23%;
     right: 0;
-    background: white;
+    background:  #e0e4ce;
     border: 1px solid #ddd;
     list-style: none;
     padding: 0;
@@ -111,7 +111,7 @@
     border-bottom: 1px solid #f0f0f0;
   }
   .suggestion-item:hover {
-    background-color: #f9f9f9;
+    background-color: #cdd1bd;
   }
   .suggestion-item:last-child {
     border-bottom: none;

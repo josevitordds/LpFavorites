@@ -46,7 +46,6 @@ function MovieDetails() {
   return (
     <>
       <div className="detailsMovie-page">
-        <h2>{movieDetails.title}</h2>
         <div className="detailsMovie-imgInf">
           <div className="detailsMovie-img">
             <img
@@ -55,6 +54,7 @@ function MovieDetails() {
             />
           </div>
           <div className="detailsMovie-infDetails">
+            <h2>{movieDetails.title}</h2>
             <div className="detailsMovie-infDetails-cards">
               <section className="avalMovie">
                 <strong>Avaliação</strong> {movieDetails.vote_average}/10
@@ -69,7 +69,7 @@ function MovieDetails() {
             </div>
             <section className="descMovie">
               <p>
-              <strong>Sinopse:</strong> {movieDetails.overview}
+                <strong>Sinopse:</strong> {movieDetails.overview}
               </p>
             </section>
             <div className="submitFavorite">
