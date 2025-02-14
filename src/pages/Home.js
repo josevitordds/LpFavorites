@@ -12,7 +12,7 @@ function Home() {
   }
   return (
     <>
-      <div className="homePage">
+      <div className="homePage bg-azulMedio">
         <div className="homePage-categors">
           <div className="homePage-nameCat">
             <h2>CATEGORIAS</h2>

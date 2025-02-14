@@ -23,6 +23,7 @@
     display:flex ;
     align-items: center;
     justify-content: space-around;
+    border-right: 1px solid black;
 }
 .detailsMovie-img{
     height: 100%;
@@ -30,6 +31,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.bg-azulForte{
     background-color: #0e111c;
 }
 .detailsMovie-img img{
@@ -45,7 +48,9 @@
     align-items: center;
     justify-content:start;
     flex-direction: column;
-    background-color: #141827;
+}
+.bg-azulMedio{
+    background-color:  #141827;
 }
 .detailsMovie-inf{
     width: 100%;

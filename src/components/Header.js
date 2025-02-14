@@ -82,10 +82,10 @@ function Header({ setMovies }) {
 
   return (
     <div className="headerPage">
-      <div className="logoHeader" onClick={() => navigate("/")}>
+      <div className="logoHeader bg-corHeader" onClick={() => navigate("/")}>
         <h1>lpFavorites</h1>
       </div>
-      <form className="pesquisaHeader" onSubmit={handleSearchSubmit} ref={searchRef}>
+      <form className="pesquisaHeader bg-corHeader" onSubmit={handleSearchSubmit} ref={searchRef}>
         <FontAwesomeIcon icon={faMagnifyingGlass} className="iconHeader" />
         <input
           type="text"
@@ -108,7 +108,7 @@ function Header({ setMovies }) {
           </ul>
         )}
       </form>
-      <div className="perfilHeader">
+      <div className="perfilHeader bg-corHeader" >
         <div className="perfilHeader-container" onClick={() => navigate("/profile")}>
           <FontAwesomeIcon icon={faUser} className="userIconHeader" />
         </div>

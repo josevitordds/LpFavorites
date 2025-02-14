@@ -49,14 +49,14 @@ function MovieDetails() {
   return (
     <>
       <div className="detailsMovie-page">
-        <div className="detailsMovie-imgInf">
+        <div className="detailsMovie-imgInf bg-azulForte">
           <div className="detailsMovie-img">
             <img
               src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
               alt={movieDetails.title || movieDetails.original_title}
             />
           </div>
-          <div className="detailsMovie-infDetails">
+          <div className="detailsMovie-infDetails bg-azulMedio">
             <div className="detailsMovie-infoMax">
               <div className="detailsMovie-infDetails-cards">
                 <h2>{movieDetails.title}</h2>

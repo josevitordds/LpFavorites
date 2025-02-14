@@ -10,7 +10,6 @@
 .logoHeader{
     width: 15%;
     height: 100%;
-    background-color:#1F2937;
     border-right: 1.5px solid #ffffff;
     display: flex;
     align-items: center;
@@ -23,7 +22,6 @@
     position: relative;
     width: 70%;
     height: 100%;
-    background-color: #1F2937;
     border-right: 1.5px solid #ffffff;
     display: flex; 
     align-items: center; 
@@ -53,11 +51,12 @@
     outline: none; 
     box-shadow: 0 0 5px rgba(28, 26, 26, 0.8); 
 }
-
+.bg-corHeader{
+    background-color:#1F2937;
+}
 .perfilHeader{
     width: 15%;
     height: 100%;
-    background-color:#1F2937;
     display: flex;
     align-items: center;
     justify-content: center;
