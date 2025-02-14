@@ -20,7 +20,8 @@ function MovieCatResults({ cat }) {
 
   return (
     <div className="movieCatResults-page">
-      <h2>{nomeGen}</h2>
+      <div className="tituloGenero"> <h2>{nomeGen}</h2></div>
+
       <div className="movieCatResults-movies">
         <div className="movieCatResults-components">
           <h2>Lançamentos</h2>

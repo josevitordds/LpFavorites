@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #A6A6A6;
+    background-color:  #141827;
 
 }
 
@@ -41,6 +41,8 @@
     font-style: normal;
     font-variation-settings:
         "GRAD" 0;
+
+    color: white;
 }
 
 .homePage-catCd {
@@ -99,6 +101,7 @@
 .homePage-movies-recentsName h2,
 .homePage-movies-goodName h2 {
     width: 100%;
+    color: white;
     padding-left: 8vw;
     font-size: 1.4vw;
     padding-bottom: 0.6vh;

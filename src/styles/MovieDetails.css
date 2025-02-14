@@ -5,14 +5,17 @@
     align-items: center;
     justify-content: center;
     flex-direction:column ;
-    background-color: #A6A6A6;
+    background-color: #141827;
 
 }
 .detailsMovie-page h2{
-    padding-top: 5vh;
-    font-size: 2vw;
+    width: 100%;
+    padding-top: 11vh;
+    font-size: 2.5vw;
+    font-weight: 1000;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
+    color: white;
 }
 .detailsMovie-imgInf{
     height: 100%;
@@ -27,7 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #A6A6A6;
+    background-color: #0e111c;
 }
 .detailsMovie-img img{
     width: 60%;
@@ -42,20 +45,19 @@
     align-items: center;
     justify-content:start;
     flex-direction: column;
-    background-color: #a3a3a3;
+    background-color: #141827;
 }
 .detailsMovie-inf{
     width: 100%;
     height: 0%;
 }
-.avalMovie, .dateMovie, .genreMovie{
-    height: 7vh;
-    width: 40%;
-    background-color: #2d3839;
+.genreMovie{
+    height: 5vh;
+    width: 100%;
     color:#e0e4ce ;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:start;
     justify-content: center;
     font-size: 1.1vw;
 }
@@ -65,13 +67,67 @@
     width: 90%;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .descMovie{
     padding-top: 2vh;
     width: 90%;
 }
 .descMovie p{
+    color: rgb(158, 158, 158);
     font-size: 1.3vw;
     text-align: justify;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.detailsMovie-infoMax {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.detailsMovie-dados{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.detailsMovieDadosCard{
+    border-radius:0.7vw ;
+    padding: 0.8vw 1vw;
+}
+.space-right-10{
+    margin-right: 1vw;
+}
+.bg-gray-700{
+    background-color:#374151 ;
+}
+.text-gray-300{
+    color: #D1D5DB;
+}
+.submitFavorite{
+    width: 90%;
+}
+.bg-red-600{
+    background-color: #DC2626 ;
+}
+
+.buttonFavorite{
+    font-size:0.9vw;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8.2vw;
+    padding: 1vw 0.5vw;
+    border: none;
+    cursor: pointer;
+    border-radius:0.7vw ;
+    gap: 0.5rem;
+}
+.buttonFavorite:hover{
+    background-color: #B91C1C;
 }

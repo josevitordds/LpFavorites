@@ -10,7 +10,7 @@
 .logoHeader{
     width: 15%;
     height: 100%;
-    background-color:#2d3839;
+    background-color:#1F2937;
     border-right: 1.5px solid #ffffff;
     display: flex;
     align-items: center;
@@ -23,7 +23,7 @@
     position: relative;
     width: 70%;
     height: 100%;
-    background-color: #2d3839;
+    background-color: #1F2937;
     border-right: 1.5px solid #ffffff;
     display: flex; 
     align-items: center; 
@@ -57,7 +57,7 @@
 .perfilHeader{
     width: 15%;
     height: 100%;
-    background-color:#2d3839;
+    background-color:#1F2937;
     display: flex;
     align-items: center;
     justify-content: center;

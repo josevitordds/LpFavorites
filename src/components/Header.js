@@ -11,7 +11,7 @@ function Header({ setMovies }) {
   const navigate = useNavigate();
   const TMDB_API_KEY = "a0261dcdeeb25805ffd5a4ecd28d9225";
   const TMDB_BASE_URL = "https://api.themoviedb.org/3";
-  const searchRef = useRef(null); // Referência para o input de pesquisa
+  const searchRef = useRef(null); 
 
   const fetchMovies = async (query) => {
     try {

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/MovieDetails.css";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import axios from "axios";
 
 function MovieDetails() {
   const { id } = useParams();
+  const [isFavorite, setIsFavorite] = useState(false);
   const [movieDetails, setMovieDetails] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -42,6 +44,7 @@ function MovieDetails() {
     return <p>Filme não encontrado.</p>;
   }
   console.log(movieDetails);
+  
 
   return (
     <>
@@ -54,27 +57,28 @@ function MovieDetails() {
             />
           </div>
           <div className="detailsMovie-infDetails">
-            <h2>{movieDetails.title}</h2>
-            <div className="detailsMovie-infDetails-cards">
-              <section className="avalMovie">
-                <strong>Avaliação</strong> {movieDetails.vote_average}/10
-              </section>
-              <section className="dateMovie">
-                <strong>Data de Lançamento</strong> {movieDetails.release_date}
-              </section>
-              <section className="genreMovie">
-                <strong>Gêneros</strong>{" "}
-                {movieDetails.genres.map((genre) => genre.name).join(", ")}
+            <div className="detailsMovie-infoMax">
+              <div className="detailsMovie-infDetails-cards">
+                <h2>{movieDetails.title}</h2>
+                <section className="genreMovie">
+                  {movieDetails.genres.map((genre) => genre.name).join(" | ")}
+                </section>
+              </div>
+              <section className="descMovie">
+                <p>
+                  <strong>Sinopse:</strong> {movieDetails.overview}
+                </p>
               </section>
             </div>
-            <section className="descMovie">
-              <p>
-                <strong>Sinopse:</strong> {movieDetails.overview}
-              </p>
-            </section>
+            <div className="detailsMovie-dados text-gray-300">
+              <span className="bg-gray-700 space-right-10 detailsMovieDadosCard">⭐ {movieDetails.vote_average}/10</span>
+              <span className="bg-gray-700 detailsMovieDadosCard">📅 {movieDetails.release_date}</span>
+            </div>
             <div className="submitFavorite">
-              <input type="checkbox"></input>
-              <p>favorito</p>
+              <button className="bg-red-600 buttonFavorite gap-2"   onClick={() => setIsFavorite(!isFavorite)}>
+              {isFavorite ? <FaHeart className="text-white" /> : <FaRegHeart className="text-white" />} 
+              Favorito
+              </button>
             </div>
           </div>
         </div>
